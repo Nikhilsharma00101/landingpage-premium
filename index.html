@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing-page-premium</title>
+
+    <!-- TAILWIND CLI -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap"
+        rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- 🌟 Scroll Progress Bar -->
+    <div id="scrollProgress"
+        class="fixed top-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-gold z-[9999] transition-all duration-200"
+        style="width: 0%;">
+    </div>
+
+    <!-- NAVBAR -->
+    <header id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur bg-charcoal/80 text-white py-4 md:py-6 shadow-gold">
+
+        <nav class="flex items-center justify-between px-6 py-4 md:py-6 transition-all duration-300" id="navbarInner">
+
+            <!-- Logo + Advocate Info -->
+            <a href="#home" class="flex items-center space-x-3">
+                <div class="leading-tight">
+                    <div class="text-xl md:text-2xl font-serif text-gold transition-all duration-300"> ⚖️Adv. Sharma.
+                    </div>
+                    <div class="text-sm text-white/80 -mt-1 font-sans tracking-wide">Supreme Court Advocate</div>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul id="navLinks" class="hidden md:flex space-x-8 font-sans text-sm uppercase tracking-wide">
+                <li><a href="#home" class="relative group nav-link-hover scroll-link">Home<span
+                            class="nav-underline"></span></a></li>
+                <li><a href="#about" class="relative group nav-link-hover scroll-link">About<span
+                            class="nav-underline"></span></a></li>
+                <li><a href="#services" class="relative group nav-link-hover scroll-link">Services<span
+                            class="nav-underline"></span></a></li>
+                <li><a href="#testimonials" class="relative group nav-link-hover scroll-link">Testimonials<span
+                            class="nav-underline"></span></a></li>
+                <li><a href="#contact" class="relative group nav-link-hover scroll-link">Contact<span
+                            class="nav-underline"></span></a></li>
+            </ul>
+
+            <!-- CTA Button -->
+            <a href="#appointment"
+                class="hidden md:inline-block bg-gradient-to-r from-gold to-yellow-400 text-black font-semibold px-5 py-2 rounded-full shadow-md animate-pulse hover:brightness-110 transition">
+                Book Appointment
+            </a>
+
+            <!-- Hamburger -->
+            <button id="menuBtn" class="md:hidden text-gold text-3xl focus:outline-none transition">
+                <span id="hamburger">&#9776;</span>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="md:hidden hidden bg-charcoal text-white flex flex-col px-6 py-4 space-y-4 transition-all duration-300">
+            <a href="#home" class="hover:text-gold scroll-link">Home</a>
+            <a href="#about" class="hover:text-gold scroll-link">About</a>
+            <a href="#services" class="hover:text-gold scroll-link">Services</a>
+            <a href="#testimonials" class="hover:text-gold scroll-link">Testimonials</a>
+            <a href="#contact" class="hover:text-gold scroll-link">Contact</a>
+            <a href="#appointment" class="bg-gold text-black text-center py-2 rounded-full mt-2">Book Appointment</a>
+        </div>
+
+        <!-- Floating Badge -->
+        <div
+            class="hidden sm:block fixed top-4 right-4 text-xs text-gold font-semibold border border-gold rounded-full px-4 py-1 bg-charcoal/80 backdrop-blur-sm shadow-md z-50">
+            20+ Yrs | SC Certified
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="bg-charcoal text-white pt-32 md:pt-36 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+            <!-- 👑 Left Content -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-gold leading-tight">
+                    Adv. Sharma.
+                </h1>
+                <p class="text-white/80 text-lg md:text-xl mt-2 mb-4 tracking-wide font-sans">
+                    Supreme Court Advocate | 30+ Yrs of Legal Excellence
+                </p>
+
+                <p class="italic text-white/70 text-base md:text-lg mb-6 font-light border-l-4 border-gold pl-4">
+                    "Protecting Rights. Pursuing Justice."
+                </p>
+
+                <!-- 🎯 Call to Actions -->
+                <div class="flex flex-wrap gap-4">
+                    <a href="#appointment"
+                        class="bg-gradient-to-r from-gold to-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow hover:brightness-110 transition">
+                        Book Appointment
+                    </a>
+                    <a href="#about"
+                        class="border border-gold text-gold px-6 py-3 rounded-full hover:bg-gold hover:text-black transition">
+                        Know My Experience
+                    </a>
+                </div>
+
+                <!-- 🛡️ Trust Badges -->
+                <div class="flex flex-wrap gap-6 mt-8 text-sm text-white/70">
+                    <div class="flex items-center gap-2 relative group">
+                        <span class="text-gold text-lg">🎖️</span>
+                        <span>Bar Council Verified</span>
+                        <!-- Tooltip -->
+                        <div
+                            class="absolute top-6 left-0 bg-black text-white text-xs px-3 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+                            Reg. No: DL/SCA/1992
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-gold text-lg">📍</span> Supreme Court Advocate
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-gold text-lg">🕒</span> 30+ Yrs Experience
+                    </div>
+                </div>
+
+                <!-- 📊 Stats Row -->
+                <div class="flex flex-wrap gap-6 mt-8 text-white/80 text-sm border-t border-white/10 pt-6">
+                    <div class="text-center">
+                        <div class="text-gold text-2xl font-bold">1000+</div>
+                        <div class="mt-1">Cases Handled</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-gold text-2xl font-bold">95%</div>
+                        <div class="mt-1">Success Rate</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-gold text-2xl font-bold">30+</div>
+                        <div class="mt-1">Years in Practice</div>
+                    </div>
+                </div>
+
+                <!-- ✍️ Signature -->
+                <img src="https://images.unsplash.com/photo-1650619112959-7e1340365ce2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Advocate Signature" class="h-10 mt-6 opacity-70" />
+            </div>
+
+            <!-- 🖼️ Right Visual -->
+            <div class="relative mt-10" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full h-96 md:h-[500px] rounded-xl bg-cover bg-center shadow-lg"
+                    style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <!-- Masked Overlay already handled by linear-gradient -->
+                </div>
+
+                <!-- Monogram Overlay -->
+                <div
+                    class="absolute bottom-6 right-6 bg-charcoal/80 px-4 py-2 rounded-full border border-gold text-gold font-serif text-xl shadow-md">
+                    RS
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="bg-white/95 text-charcoal py-28">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+
+            <!-- 🖼️ Advocate Image -->
+            <div class="flex justify-center md:justify-start">
+                <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=768&q=80"
+                    alt="Advocate Portrait" class="w-full max-w-sm rounded-2xl border-4 border-gold shadow-xl" />
+            </div>
+
+            <!-- 🧑‍⚖️ Bio Content -->
+            <div>
+                <!-- Heading -->
+                <div class="mb-6">
+                    <div class="flex items-center gap-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/760/760715.png" alt="Royal Crest"
+                            class="w-8 h-8">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gold tracking-tight">About Adv. Sharma
+                        </h2>
+                    </div>
+                    <div class="h-1 w-16 bg-gold mt-3 rounded"></div>
+                </div>
+
+                <!-- Paragraph -->
+                <p class="text-base md:text-lg text-charcoal/90 leading-relaxed font-sans mb-6">
+                    Adv. R. Sharma is a Supreme Court Advocate with over three decades of legal excellence. From
+                    constitutional challenges to high-stakes corporate disputes, he has consistently delivered justice
+                    with integrity, discretion, and dedication.
+                </p>
+
+                <!-- Quote -->
+                <blockquote class="italic text-charcoal/70 border-l-4 border-gold pl-6 mb-6">
+                    “Law is not just a profession, it's a lifelong responsibility.”
+                </blockquote>
+
+                <!-- Stats -->
+                <div class="flex flex-wrap gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="w-1/3 text-gold text-3xl font-bold">30+</div>
+                        <div class="text-sm mt-1 text-charcoal/80">Years of Practice</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-1/3 text-gold text-3xl font-bold">1000+</div>
+                        <div class="text-sm mt-1 text-charcoal/80">Cases Handled</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-1/3 text-gold text-3xl font-bold">95%</div>
+                        <div class="text-sm mt-1 text-charcoal/80">Success Rate</div>
+                    </div>
+                </div>
+
+                <!-- Signature -->
+                <div class="flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1650619112959-7e1340365ce2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Advocate Signature" class="h-12 w-auto opacity-80" />
+                    <div>
+                        <p class="font-serif text-xl text-charcoal">Adv. R. Sharma</p>
+                        <p class="text-sm text-charcoal/70">Supreme Court Advocate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHY CHOOSE ME + EXPERTISE COMPACT SECTION -->
+        <div class="max-w-6xl mx-auto px-6 md:px-10 mt-24 space-y-16">
+
+            <!-- 🧠 Why Choose Me (Compact Strip with Hover Effects) -->
+            <div>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center text-charcoal mb-10">Why Choose Me</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white border border-gold rounded-xl p-6 shadow transition duration-300 hover:scale-[1.02] hover:shadow-xl cursor-default">
+                        <div class="flex items-center justify-center text-gold text-3xl mb-3">⚖️</div>
+                        <h4 class="text-lg font-semibold text-gold mb-1 text-center">Unmatched Dedication</h4>
+                        <p class="text-sm text-charcoal/80 text-center leading-relaxed">Every case gets individual
+                            attention and detailed strategy.</p>
+                    </div>
+                    <div
+                        class="bg-white border border-gold rounded-xl p-6 shadow transition duration-300 hover:scale-[1.02] hover:shadow-xl cursor-default">
+                        <div class="flex items-center justify-center text-gold text-3xl mb-3">🔐</div>
+                        <h4 class="text-lg font-semibold text-gold mb-1 text-center">Client Confidentiality</h4>
+                        <p class="text-sm text-charcoal/80 text-center leading-relaxed">Matters are treated with utmost
+                            discretion and legal integrity.</p>
+                    </div>
+                    <div
+                        class="bg-white border border-gold rounded-xl p-6 shadow transition duration-300 hover:scale-[1.02] hover:shadow-xl cursor-default">
+                        <div class="flex items-center justify-center text-gold text-3xl mb-3">🏆</div>
+                        <h4 class="text-lg font-semibold text-gold mb-1 text-center">Proven Results</h4>
+                        <p class="text-sm text-charcoal/80 text-center leading-relaxed">Trusted by 1000+ clients for
+                            successful high-court outcomes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⚖️ Areas of Expertise (Compact Grid) -->
+            <div>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center text-charcoal mb-8">Areas of Expertise
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm font-medium">
+                    <span
+                        class="text-center px-4 py-2 border border-gold text-charcoal bg-white rounded-full hover:bg-gold hover:text-black transition">Civil
+                        Law</span>
+                    <span
+                        class="text-center px-4 py-2 border border-gold text-charcoal bg-white rounded-full hover:bg-gold hover:text-black transition">Criminal
+                        Law</span>
+                    <span
+                        class="text-center px-4 py-2 border border-gold text-charcoal bg-white rounded-full hover:bg-gold hover:text-black transition">Corporate
+                        Law</span>
+                    <span
+                        class="text-center px-4 py-2 border border-gold text-charcoal bg-white rounded-full hover:bg-gold hover:text-black transition">Property</span>
+                    <span
+                        class="text-center px-4 py-2 border border-gold text-charcoal bg-white rounded-full hover:bg-gold hover:text-black transition">Writ
+                        Petitions</span>
+                    <span
+                        class="text-center px-4 py-2 border border-gold text-charcoal bg-white rounded-full hover:bg-gold hover:text-black transition">Family
+                        Law</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PRACTICE AREAS SECTION -->
+    <section id="services" class="bg-charcoal text-white py-28">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+
+            <!-- 🏛️ Section Heading -->
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gold mb-3">Practice Areas</h2>
+                <p class="text-white/70 text-base max-w-2xl mx-auto">
+                    30+ Years of Diverse Legal Excellence across India's Judicial System.
+                </p>
+            </div>
+
+            <!-- ⚖️ Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+
+                <!-- CARDS -->
+
+                <!-- PRACTICE AREA CARD WITH MODAL TRIGGER -->
+                <div onclick="openModal('civilModal')"
+                    class="cursor-pointer bg-white/5 backdrop-blur border border-gold rounded-xl p-6 transition hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4587/4587581.png" alt="Civil Law Icon"
+                            class="w-8 h-8">
+                        <h3 class="text-lg font-semibold text-gold border-l-4 border-gold pl-3">Civil Litigation</h3>
+                    </div>
+                    <p class="text-sm text-white/80">Property, contracts, recovery suits, torts & more.</p>
+                </div>
+
+                <!-- CIVIL LITIGATION MODAL -->
+                <div id="civilModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4">
+                    <div
+                        class="bg-charcoal border border-gold text-white max-w-xl w-full p-6 rounded-xl backdrop-blur-lg relative">
+
+                        <!-- Close Button -->
+                        <button onclick="closeModal('civilModal')"
+                            class="absolute top-4 right-4 text-white text-xl hover:text-gold">&times;</button>
+
+                        <!-- Modal Content -->
+                        <h2 class="text-2xl font-serif font-bold text-gold mb-4">Civil Litigation</h2>
+                        <p class="text-white/80 text-sm leading-relaxed">
+                            Civil litigation refers to a legal dispute between two or more parties that seek money
+                            damages or specific performance rather than criminal sanctions. I specialize in:
+                        </p>
+
+                        <ul class="list-disc list-inside mt-4 text-sm text-white/80 space-y-1">
+                            <li>Property disputes including ownership, possession & partitions</li>
+                            <li>Contractual disagreements and commercial lawsuits</li>
+                            <li>Recovery suits, damages, and injunctions</li>
+                            <li>Tort claims, defamation, and consumer protection matters</li>
+                            <li>Representation at all civil forums, High Courts & Supreme Court</li>
+                        </ul>
+
+                        <div class="text-right mt-6">
+                            <a href="#appointment"
+                                class="bg-gold text-black font-semibold px-5 py-2 rounded-full hover:brightness-110 transition">
+                                Book Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- MODAL END -->
+
+
+                <div
+                    class="bg-white/5 backdrop-blur border border-gold rounded-xl p-6 transition hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://cdn-icons-png.flaticon.com/512/985/985568.png" alt="Criminal Law Icon"
+                            class="w-6 h-6">
+                        <h3 class="text-base md:text-lg font-semibold text-gold">Criminal Defense</h3>
+                    </div>
+                    <p class="text-sm text-white/80">Bail, anticipatory, trials & appellate court defense.</p>
+                </div>
+
+                <div
+                    class="bg-white/5 backdrop-blur border border-gold rounded-xl p-6 transition hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4371/4371081.png" alt="Corporate Law Icon"
+                            class="w-6 h-6">
+                        <h3 class="text-base md:text-lg font-semibold text-gold">Corporate Law</h3>
+                    </div>
+                    <p class="text-sm text-white/80">Compliance, business structuring, mergers & disputes.</p>
+                </div>
+
+                <div
+                    class="bg-white/5 backdrop-blur border border-gold rounded-xl p-6 transition hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942840.png" alt="Property Law Icon"
+                            class="w-6 h-6">
+                        <h3 class="text-base md:text-lg font-semibold text-gold">Property Disputes</h3>
+                    </div>
+                    <p class="text-sm text-white/80">Title verification, eviction, ancestral property & tenancy.</p>
+                </div>
+
+                <div
+                    class="bg-white/5 backdrop-blur border border-gold rounded-xl p-6 transition hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://cdn-icons-png.flaticon.com/512/9942/9942383.png" alt="Writ Petition Icon"
+                            class="w-6 h-6">
+                        <h3 class="text-base md:text-lg font-semibold text-gold">Writ Petitions</h3>
+                    </div>
+                    <p class="text-sm text-white/80">PILs, Habeas Corpus, Mandamus & Fundamental Rights.</p>
+                </div>
+
+                <div
+                    class="bg-white/5 backdrop-blur border border-gold rounded-xl p-6 transition hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3945/3945749.png" alt="Family Law Icon"
+                            class="w-6 h-6">
+                        <h3 class="text-base md:text-lg font-semibold text-gold">Family Matters</h3>
+                    </div>
+                    <p class="text-sm text-white/80">Divorce, custody, domestic violence, dowry & maintenance.</p>
+                </div>
+
+            </div>
+
+            <!-- 📞 CTA -->
+            <div class="text-center mt-12">
+                <p class="text-white/80 text-sm mb-4">Need legal support in any of these areas?</p>
+                <a href="#appointment"
+                    class="inline-block bg-gradient-to-r from-gold to-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow hover:brightness-110 transition">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="relative bg-cover bg-center bg-no-repeat text-white py-28 overflow-hidden"
+        style="background-image: url('./images/test.jpg');">
+
+        <!-- 🔲 Overlay for readability -->
+        <div class="absolute inset-0 bg-black/70 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+
+            <!-- 🏛️ Section Heading -->
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gold mb-2">Client Testimonials</h2>
+                <p class="text-white/80 text-base max-w-2xl mx-auto">
+                    Voices of trust from those I've had the honor to represent.
+                </p>
+            </div>
+
+            <!-- 🤝 Testimonial Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 backdrop-blur border border-gold/30 rounded-xl shadow-lg p-6">
+                    <div class="mb-4 text-3xl text-gold">“</div>
+                    <p class="text-white/90 text-sm leading-relaxed mb-6">
+                        Adv. Sharma resolved a 7-year property dispute for our family with absolute clarity and
+                        confidence. His legal knowledge and calm demeanor earned our complete trust.
+                    </p>
+                    <div class="border-t border-white/20 pt-4">
+                        <p class="font-semibold text-gold">Mr. Rajeev Malhotra</p>
+                        <p class="text-sm text-white/60">Property Dispute</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 backdrop-blur border border-gold/30 rounded-xl shadow-lg p-6">
+                    <div class="mb-4 text-3xl text-gold">“</div>
+                    <p class="text-white/90 text-sm leading-relaxed mb-6">
+                        In a difficult family case, I was guided patiently and fearlessly. His commitment to justice and
+                        professionalism made all the difference in my life.
+                    </p>
+                    <div class="border-t border-white/20 pt-4">
+                        <p class="font-semibold text-gold">Mrs. Neha Agarwal</p>
+                        <p class="text-sm text-white/60">Family Matter</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/10 backdrop-blur border border-gold/30 rounded-xl shadow-lg p-6">
+                    <div class="mb-4 text-3xl text-gold">“</div>
+                    <p class="text-white/90 text-sm leading-relaxed mb-6">
+                        When falsely accused in a criminal case, Adv. Sharma fought relentlessly for me. His deep legal
+                        insights and sharp advocacy skills gave me a new life.
+                    </p>
+                    <div class="border-t border-white/20 pt-4">
+                        <p class="font-semibold text-gold">Mr. Ramesh Jha</p>
+                        <p class="text-sm text-white/60">Criminal Defense</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- NAVBAR TOGGLE JS -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navbar = document.getElementById("navbar");
+        const navbarInner = document.getElementById("navbarInner");
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.querySelectorAll(".scroll-link");
+
+        // Toggle Menu
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            hamburger.innerHTML = hamburger.innerHTML === "✖" ? "&#9776;" : "✖";
+        });
+
+        // Scroll Effect
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add("glow-navbar");
+                navbarInner.classList.remove("py-4", "md:py-6");
+                navbarInner.classList.add("py-2");
+            } else {
+                navbar.classList.remove("glow-navbar");
+                navbarInner.classList.remove("py-2");
+                navbarInner.classList.add("py-4", "md:py-6");
+            }
+
+
+            // ScrollSpy
+            let fromTop = window.scrollY + 80;
+            navLinks.forEach(link => {
+                let section = document.querySelector(link.getAttribute("href"));
+                if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    link.classList.add("active-link");
+                } else {
+                    link.classList.remove("active-link");
+                }
+            });
+        });
+    </script>
+
+
+    <!-- PROGRESS BAR SCRIPT -->
+    <script>
+        const scrollProgress = document.getElementById("scrollProgress");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = `${scrollPercent}%`;
+        });
+    </script>
+
+
+    <!-- ADDS SMOOTH ANIMATION when jumping to sections -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+    <!-- MODAL SCRIPT TO OPEN AND CLOSE -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById(id).classList.add('flex');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('flex');
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+
+
+
+
+</body>
+
+</html>
