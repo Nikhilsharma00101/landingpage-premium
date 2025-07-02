@@ -11,6 +11,7 @@ module.exports = {
         serif: ["'Playfair Display'", "serif"],
         sans: ["Inter", "sans-serif"],
       },
+      
     },
   },
   plugins: [],
