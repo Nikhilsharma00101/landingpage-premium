@@ -1,67 +1,70 @@
   /*  NAVBAR CSS  */
 
-        /* Gradient underline */
-        .nav-underline {
-            display: block;
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: linear-gradient(to right, #FFD700, #D4AF37, #FFD700);
-            background-size: 200% auto;
-            transition: width 0.4s ease, background-position 0.4s ease;
-        }
-
-        .group:hover .nav-underline {
-            width: 100%;
-            background-position: right center;
-        }
-
-        .glow-navbar {
-            box-shadow: 0 2px 15px 0 #FFD700aa;
-            border-bottom: 1px solid #D4AF37;
-        }
-
-        .nav-link-hover:hover {
-            color: #FFD700;
-            filter: drop-shadow(0 0 3px #FFD700);
-        }
-
-        .icon-hover:hover {
-            animation: bounce-glow 1s ease;
-            filter: drop-shadow(0 0 5px #FFD700);
-        }
-
-        @keyframes bounce-glow {
-            0% {
-                transform: translateY(0);
-            }
-
-            30% {
-                transform: translateY(-4px);
-            }
-
-            60% {
-                transform: translateY(2px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .active-link {
-            color: #FFD700 !important;
-            font-weight: 600;
-        }
-
-        /* You can customize height or transition here if needed */
-        #scrollProgress {
-            transition: width 0.25s ease-out;
-        }
-
-
-        .shadow-gold {
-    box-shadow: 0 4px 15px -2px rgba(212, 175, 55, 0.25);
+  /* Gradient underline */
+  .nav-underline {
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(to right, #FFD700, #D4AF37, #FFD700);
+      background-size: 200% auto;
+      transition: width 0.4s ease, background-position 0.4s ease;
   }
+
+  .group:hover .nav-underline {
+      width: 100%;
+      background-position: right center;
+  }
+
+  .glow-navbar {
+      box-shadow: 0 2px 15px 0 #FFD700aa;
+      border-bottom: 1px solid #D4AF37;
+  }
+
+  .nav-link-hover:hover {
+      color: #FFD700;
+      filter: drop-shadow(0 0 3px #FFD700);
+  }
+
+  .icon-hover:hover {
+      animation: bounce-glow 1s ease;
+      filter: drop-shadow(0 0 5px #FFD700);
+  }
+
+  @keyframes bounce-glow {
+      0% {
+          transform: translateY(0);
+      }
+
+      30% {
+          transform: translateY(-4px);
+      }
+
+      60% {
+          transform: translateY(2px);
+      }
+
+      100% {
+          transform: translateY(0);
+      }
+  }
+
+  .active-link {
+      color: #FFD700 !important;
+      font-weight: 600;
+  }
+
+  /* You can customize height or transition here if needed */
+  #scrollProgress {
+      transition: width 0.25s ease-out;
+  }
+
+
+  .shadow-gold {
+      box-shadow: 0 4px 15px -2px rgba(212, 175, 55, 0.25);
+  }
+
+
+  
